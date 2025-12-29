@@ -6,7 +6,6 @@
 //
 
 import UserNotifications
-import SamplePackage
 import SwiftUI
 
 struct ContentView: View {

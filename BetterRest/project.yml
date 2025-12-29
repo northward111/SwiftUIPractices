@@ -1,0 +1,39 @@
+name: BetterRest
+options:
+  bundleIdPrefix: me.jzj
+settings:
+  base:
+    DEVELOPMENT_TEAM: "5WXVA53Q8X"
+    GENERATE_INFOPLIST_FILE: YES
+    SWIFT_DEFAULT_ACTOR_ISOLATION: nonisolated
+    SWIFT_STRICT_CONCURRENCY: Complete
+packages:
+  ComposableArchitecture:
+    url: https://github.com/pointfreeco/swift-composable-architecture
+    majorVersion: 1.23.1
+targets:
+  BetterRest:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - BetterRest
+    dependencies:
+      - package: ComposableArchitecture
+        product: ComposableArchitecture
+    info:
+      path: BetterRest/Info.plist
+      properties:
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: "me.jzj.BetterRest"
+  BetterRestTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: BetterRestTests
+    dependencies:
+      - target: BetterRest
+      

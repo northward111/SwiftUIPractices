@@ -1,0 +1,44 @@
+name: ScrumDinger
+options:
+  bundleIdPrefix: me.jzj
+settings:
+  base:
+    DEVELOPMENT_TEAM: "5WXVA53Q8X"
+    GENERATE_INFOPLIST_FILE: YES
+    SWIFT_DEFAULT_ACTOR_ISOLATION: nonisolated
+    SWIFT_STRICT_CONCURRENCY: Complete
+packages:
+  ComposableArchitecture:
+    url: https://github.com/pointfreeco/swift-composable-architecture
+    majorVersion: 1.23.1
+  GRDB:
+    url: https://github.com/groue/GRDB.swift
+    majorVersion: 7.8.0
+targets:
+  ScrumDinger:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - ScrumDinger
+    dependencies:
+      - package: ComposableArchitecture
+        product: ComposableArchitecture
+      - package: GRDB
+        product: GRDB
+    info:
+      path: ScrumDinger/Info.plist
+      properties:
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: "me.jzj.ScrumDinger"
+  ScrumDingerTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: ScrumDingerTests
+    dependencies:
+      - target: ScrumDinger
+      

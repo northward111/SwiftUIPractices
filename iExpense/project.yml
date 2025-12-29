@@ -1,0 +1,24 @@
+name: iExpense
+options:
+  bundleIdPrefix: me.jzj
+settings:
+  base:
+    DEVELOPMENT_TEAM: "5WXVA53Q8X"
+    GENERATE_INFOPLIST_FILE: YES
+    SWIFT_DEFAULT_ACTOR_ISOLATION: nonisolated
+    SWIFT_STRICT_CONCURRENCY: Complete
+targets:
+  GuessTheFlag:
+    type: application
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources:
+      - iExpense
+    info:
+      path: iExpense/Info.plist
+      properties:
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: "me.jzj.iExpense"
+      

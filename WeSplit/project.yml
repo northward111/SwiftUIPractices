@@ -1,0 +1,39 @@
+name: WeSplit
+options:
+  bundleIdPrefix: me.jzj
+settings:
+  base:
+    DEVELOPMENT_TEAM: "5WXVA53Q8X"
+    GENERATE_INFOPLIST_FILE: YES
+    SWIFT_DEFAULT_ACTOR_ISOLATION: nonisolated
+    SWIFT_STRICT_CONCURRENCY: Complete
+packages:
+  ComposableArchitecture:
+    url: https://github.com/pointfreeco/swift-composable-architecture
+    majorVersion: 1.23.1
+targets:
+  WeSplit:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - WeSplit
+    dependencies:
+      - package: ComposableArchitecture
+        product: ComposableArchitecture
+    info:
+      path: WeSplit/Info.plist
+      properties:
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: "me.jzj.WeSplit"
+  WeSplitTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: WeSplitTests
+    dependencies:
+      - target: WeSplit
+      

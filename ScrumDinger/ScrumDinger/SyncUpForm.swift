@@ -13,7 +13,7 @@ struct SyncUpForm {
     @ObservableState
     struct State: Equatable {
         var focus: Field? = .title
-        var syncUp: SyncUp.Draft
+        var syncUp: SyncUp
         
         enum Field: Hashable {
             case attendee(Attendee.ID)

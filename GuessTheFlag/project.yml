@@ -1,0 +1,24 @@
+name: GuessTheFlag
+options:
+  bundleIdPrefix: me.jzj
+settings:
+  base:
+    DEVELOPMENT_TEAM: "5WXVA53Q8X"
+    GENERATE_INFOPLIST_FILE: YES
+    SWIFT_DEFAULT_ACTOR_ISOLATION: nonisolated
+    SWIFT_STRICT_CONCURRENCY: Complete
+targets:
+  GuessTheFlag:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - GuessTheFlag
+    info:
+      path: GuessTheFlag/Info.plist
+      properties:
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: "me.jzj.GuessTheFlag"
+      

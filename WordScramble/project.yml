@@ -1,0 +1,39 @@
+name: WordScramble
+options:
+  bundleIdPrefix: me.jzj
+settings:
+  base:
+    DEVELOPMENT_TEAM: "5WXVA53Q8X"
+    GENERATE_INFOPLIST_FILE: YES
+    SWIFT_DEFAULT_ACTOR_ISOLATION: nonisolated
+    SWIFT_STRICT_CONCURRENCY: Complete
+packages:
+  ComposableArchitecture:
+    url: https://github.com/pointfreeco/swift-composable-architecture
+    majorVersion: 1.23.1
+targets:
+  WordScramble:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - WordScramble
+    dependencies:
+      - package: ComposableArchitecture
+        product: ComposableArchitecture
+    info:
+      path: WordScramble/Info.plist
+      properties:
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: "me.jzj.WordScramble"
+  WordScrambleTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: WordScrambleTests
+    dependencies:
+      - target: WordScramble
+      
