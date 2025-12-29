@@ -39,7 +39,6 @@ targets:
         product: ComposableArchitecture
       - package: GRDB
         product: GRDB
-        transitivelyLinkDependencies: true
     info:
       path: FriendFaceTCA/Info.plist
       properties:
